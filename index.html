@@ -175,29 +175,15 @@
 
 
 <!-- FIRST PAGE -->
-<div class="card" id="page1">
+<div class="buttons">
 
-    <div class="coffee">☕</div>
+    <button class="yes" onclick="showCat()">
+        YES ☕💙
+    </button>
 
-    <h1>Okay, important question...</h1>
-
-    <p>
-        Would you be interested in going out with me
-        on a little coffee date? 💙
-        <br><br>
-        Nothing too serious... just good coffee,
-        good vibes and hopefully some fun.
-    </p>
-
-    <div class="buttons">
-        <button class="yes" onclick="showPage2()">
-            YES ☕💙
-        </button>
-
-        <button class="no" onclick="showPage2()">
-            NO 😭
-        </button>
-    </div>
+    <button class="no" onclick="showPage2()">
+        NO 😭
+    </button>
 
 </div>
 
@@ -257,6 +243,12 @@ function showPage2() {
     document.getElementById("page2").classList.remove("hidden");
 }
 
+function showCat() {
+    document.getElementById("page1").classList.add("hidden");
+    document.getElementById("page2").classList.add("hidden");
+    document.getElementById("page3").classList.remove("hidden");
+}
+
 function changeNo() {
 
     const button = document.getElementById("secondNo");
@@ -268,11 +260,6 @@ function changeNo() {
     button.onclick = function() {
         showCat();
     };
-}
-
-function showCat() {
-    document.getElementById("page2").classList.add("hidden");
-    document.getElementById("page3").classList.remove("hidden");
 }
 
 </script>
